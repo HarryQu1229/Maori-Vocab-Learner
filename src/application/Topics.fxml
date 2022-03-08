@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TopicsController">
+   <children>
+      <Label fx:id="chooseLabel" alignment="CENTER" layoutY="144.0" prefHeight="49.0" prefWidth="1080.0" text="Choose your topic!" textAlignment="CENTER">
+         <font>
+            <Font name="Open Sans" size="34.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="topicBox" layoutX="375.0" layoutY="338.0" prefHeight="50.0" prefWidth="350.0" promptText="Click me to choose!">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></ComboBox>
+      <Button layoutX="435.0" layoutY="483.0" mnemonicParsing="false" onAction="#NewGameTopic" prefHeight="50.0" prefWidth="200.0">
+         <font>
+            <Font name="Open Sans" size="22.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/continue.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="helpButton" layoutX="875.0" layoutY="25.0" mnemonicParsing="false" onAction="#help" prefHeight="73.0" prefWidth="200.0" text="Help">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ask.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <BorderPane fx:id="HelpBorderPane" layoutX="768.0" layoutY="46.0" prefHeight="196.0" prefWidth="276.0" visible="false">
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#closeHelp" text="Close" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </bottom>
+         <center>
+            <Label fx:id="helpLabel" alignment="CENTER" prefHeight="268.0" prefWidth="654.0" text="Choose a topic&#10;and press continue!&#10;&#10;Practice mode:&#10;Quick Practice = 3 words&#10;Normal Practice = 5 words&#10;Practice All = All words" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button mnemonicParsing="false" onAction="#returnMenu" prefHeight="40.0" prefWidth="54.0" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <HBox fx:id="practiceWordNumberHBox" layoutX="270.0" layoutY="414.0" prefHeight="30.0" prefWidth="561.0" visible="false">
+         <children>
+            <CheckBox fx:id="quickPracticeButton" mnemonicParsing="false" onAction="#quickPractice" prefHeight="18.0" prefWidth="177.0" text="Quick Practice" />
+            <Separator orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <CheckBox fx:id="normalPracticeButton" mnemonicParsing="false" onAction="#normalPractice" prefHeight="18.0" prefWidth="179.0" text="Normal Practice" />
+            <Separator orientation="VERTICAL" prefHeight="49.0" prefWidth="53.0" />
+            <CheckBox fx:id="practiceAllButton" mnemonicParsing="false" onAction="#practiceAll" prefHeight="18.0" prefWidth="150.0" text="Practice All" />
+         </children>
+      </HBox>
+      <VBox fx:id="practiceModeMessageVBox" layoutX="249.0" layoutY="396.0" prefHeight="18.0" prefWidth="616.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="675.0" text="Select Practice Mode" />
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

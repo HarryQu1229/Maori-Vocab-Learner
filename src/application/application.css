@@ -1,0 +1,141 @@
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 30.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.button:hover {
+  	-fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+ .table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #1dbbddc3, #062979c3);
+    -fx-background-radius: 7px 7px 0px 0px;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 30.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler{
+  	-fx-background-color: transparent;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+    -fx-text-fill: white;
+    -fx-font-size: 20.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+.table-row-cell:hover {
+    -fx-background-color: #062979c3;
+    -fx-text-background-color: red;
+}
+.table-row-cell:odd{
+    -fx-background-color: #062979c3;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #1dbbddc3;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbddc3, #062979c3);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbddc3, #062979c3);
+}
+
+@font-face {
+	src: url("fonts/arlrdbd.ttf")
+}
+
+.root {
+	-fx-background-color: #129ac8;
+}
+
+.label {
+	-fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+
+}
+
+.largerlabel{
+	-fx-text-fill: white;
+	-fx-font-size: 60.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+}
+
+.greenlabel {
+	-fx-text-fill: chartreuse;
+    -fx-font-size: 30.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+
+}
+
+.greenlabelsmall {
+	-fx-text-fill: chartreuse;
+    -fx-font-size: 15.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+
+}
+
+.helplabel {
+	-fx-background-color: #062979ab;
+	-fx-background-radius: 7px 7px 7px 7px;
+    -fx-text-fill: white;
+    -fx-font-size: 15.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.timerlabel {
+	-fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-size: 15.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.check-box {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15.0px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}

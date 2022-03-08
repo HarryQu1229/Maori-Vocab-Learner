@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="640.0" maxWidth="1080.0" minHeight="640.0" minWidth="1080.0" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="1080.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/kemukupulogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="593.0" fitWidth="1100.0" layoutX="-10.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/grass.png" />
+         </image>
+      </ImageView>
+      <BorderPane fx:id="HelpBorderPane" layoutX="758.0" layoutY="36.0" prefHeight="196.0" prefWidth="276.0" visible="false">
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#closeHelp" text="Close" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </bottom>
+         <center>
+            <Label fx:id="helpLabel" alignment="CENTER" prefHeight="268.0" prefWidth="358.0" text="Games module:&#10;Test your skills!&#10;&#10;Practice module:&#10;Practice your spelling!" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button fx:id="quitButton" layoutX="840.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="77.0" prefWidth="226.0">
+         <font>
+            <Font name="Open Sans" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/quit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="gamesButton" layoutX="180.0" layoutY="393.0" mnemonicParsing="false" onAction="#NewGame" prefHeight="100.0" prefWidth="300.0">
+         <font>
+            <Font name="Open Sans" size="30.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="194.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/games%20module.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="gamesButton1" layoutX="597.0" layoutY="393.0" mnemonicParsing="false" onAction="#PracticeGame" prefHeight="100.0" prefWidth="300.0">
+         <font>
+            <Font name="Open Sans" size="30.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="practiceButton" fitHeight="204.0" fitWidth="306.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/practice%20module.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="helpButton" layoutX="875.0" layoutY="25.0" mnemonicParsing="false" onAction="#help" prefHeight="73.0" prefWidth="200.0" text="Help">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ask.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

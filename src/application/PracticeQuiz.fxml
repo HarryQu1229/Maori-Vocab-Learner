@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PracticeQuizController">
+   <children>
+      <Label fx:id="spellSpokenLabel" alignment="CENTER" layoutX="-1.0" layoutY="23.0" prefHeight="88.0" prefWidth="1080.0" text="Spell the spoken word" textAlignment="CENTER">
+         <font>
+            <Font name="Open Sans" size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answerText" alignment="CENTER" layoutX="215.0" layoutY="289.0" prefHeight="100.0" prefWidth="650.0">
+         <font>
+            <Font name="Open Sans" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Button fx:id="checkButton" layoutX="864.0" layoutY="288.0" mnemonicParsing="false" onAction="#check" prefHeight="100.0" prefWidth="135.0" text="Check" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Open Sans" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="speakButton" layoutX="214.0" layoutY="563.0" mnemonicParsing="false" onAction="#speakWordButton">
+         <font>
+            <Font name="Open Sans" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Speak%20Again.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="progressLabel" alignment="CENTER_RIGHT" layoutX="838.0" layoutY="585.0" prefHeight="50.0" prefWidth="236.0" textAlignment="RIGHT">
+         <font>
+            <Font name="Open Sans" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="dontKnowButton" layoutX="643.0" layoutY="563.0" mnemonicParsing="false" onAction="#dontKnow">
+         <font>
+            <Font name="Open Sans" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/I%20dont%20know.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="hintLabel" alignment="CENTER" layoutX="214.0" layoutY="122.0" prefHeight="40.0" prefWidth="650.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lengthLabel" alignment="CENTER" contentDisplay="CENTER" ellipsisString="(word is too long to show)" layoutY="162.0" prefHeight="80.0" prefWidth="1080.0" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Open Sans" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="helpButton" layoutX="875.0" layoutY="25.0" mnemonicParsing="false" onAction="#help" prefHeight="73.0" prefWidth="200.0" text="Help" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ask.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <BorderPane fx:id="HelpBorderPane" layoutX="768.0" layoutY="46.0" prefHeight="196.0" prefWidth="276.0" visible="false">
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#closeHelp" text="Close" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </bottom>
+         <center>
+            <Label fx:id="helpLabel" alignment="CENTER" prefHeight="193.0" prefWidth="276.0" text="Macrons: Click to see macrons&#10;Click the letters to add them&#10;Speed: Click to see the speed&#10;Slide the slider to hear the word&#10;faster or slower&#10;Check: Click to check your word&#10;Speak again: Hear the word again&#10;I don't know: Move to the next word" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button alignment="TOP_LEFT" layoutX="214.0" layoutY="242.0" mnemonicParsing="false" onAction="#toggleMacronButtonBar" prefHeight="40.0" prefWidth="222.0" text="Macrons">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/maori.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ButtonBar fx:id="macronButtonBar" layoutX="380.0" layoutY="242.0" prefHeight="40.0" prefWidth="432.0" visible="false">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#āEnter" prefHeight="23.0" prefWidth="43.0" text="ā">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#ēEnter" prefHeight="23.0" prefWidth="43.0" text="ē">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#īEnter" prefHeight="23.0" prefWidth="43.0" text="ī">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#ōEnter" prefHeight="23.0" prefWidth="43.0" text="ō">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#ūEnter" prefHeight="23.0" prefWidth="43.0" text="ū">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+         </buttons>
+      </ButtonBar>
+      <ProgressBar fx:id="timerProgressBar" layoutX="214.0" layoutY="389.0" prefHeight="30.0" prefWidth="650.0" progress="1.0" />
+      <Label fx:id="timerLabel" alignment="CENTER" layoutX="214.0" layoutY="389.0" prefHeight="25.0" prefWidth="650.0" text="25s" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <BorderPane fx:id="speedBorderPane" layoutX="4.0" layoutY="126.0" prefHeight="437.0" prefWidth="191.0" visible="false">
+         <left>
+            <Slider fx:id="speedSlider" blockIncrement="0.25" majorTickUnit="0.25" max="2.0" min="0.25" minorTickCount="0" orientation="VERTICAL" prefHeight="361.0" prefWidth="101.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" BorderPane.alignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Slider>
+         </left>
+         <top>
+            <Label fx:id="speedLabel" alignment="CENTER" prefHeight="44.0" prefWidth="191.0" text="Speed: 1x" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Open Sans" size="17.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <Button layoutX="14.0" layoutY="571.0" mnemonicParsing="false" onAction="#toggleSpeedBorderPane">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/speed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="114.0" fitWidth="432.0" layoutX="484.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/puppy-gf41a84e54_640.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="encourageLabel" alignment="CENTER" layoutX="214.0" layoutY="487.0" prefHeight="88.0" prefWidth="650.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Open Sans" size="13.0" />
+         </font></Label>
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="215.0" layoutY="419.0" prefHeight="88.0" prefWidth="650.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Open Sans" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="-1.0" mnemonicParsing="false" onAction="#returnMenu" prefHeight="40.0" prefWidth="54.0" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
